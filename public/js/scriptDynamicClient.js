@@ -1,14 +1,20 @@
 const cardList = [{
-    title: 'cat 2',
-    path: 'images/kitten-2.jpg',
-    link: 'About Cat 2',
-    description: 'Description of Cat 2'
+    title: 'Volkswagen: Virtus',
+    path: '/images/virtus.jpg',
+    link: 'About Virtus by Volkswagen',
+    description: 'The Volkswagen Virtus has 2 Petrol Engine on offer. The Petrol engine is 999 cc and 1498 cc . It is available with Manual & Automatic transmission. Depending upon the variant and fuel type the Virtus has a mileage of 18.12 to 20.8 kmpl & Ground clearance of Virtus is 179mm.'
 },
 {
-    title: 'cat 3',
-    path: 'images/kitten-3.jpg',
-    link: 'About Cat 3',
-    description: 'Description of Cat 3'
+    title: 'Skoda: Rapid',
+    path: 'images/rapid.jpg',
+    link: 'About Rapid by Skoda',
+    description: 'Skoda Rapid is a 5 seater Sedan. It is available in 27 variants, 1498 to 1598 cc engine options and 2 transmission options : Manual and Automatic.'
+},
+{
+    title: 'Mercedes: G Wagon',
+    path: '/images/gwagon.jpg',
+    link: 'About G Wagon by Mercedes',
+    description: 'GWagon'
 }];
 
 
@@ -22,7 +28,7 @@ const addCards = (items) => {
             '<span class="card-title activator grey-text text-darken-4">' + item.title + '<i class="material-icons right">more_vert</i></span><p><a href="#">' + item.link + '</a></p></div>' +
             '<div class="card-reveal">' +
             '<span class="card-title grey-text text-darken-4">' + item.title + '<i class="material-icons right">close</i></span>' +
-            '<p class="card-text">' + item.desciption + '</p>' +
+            '<p class="card-text grey-text text-darken-4">' + item.description + '</p>' +
             '</div></div></div>';
         $("#card-section").append(itemToAppend)
     });

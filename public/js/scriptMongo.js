@@ -20,24 +20,24 @@ const formSubmitted = () => {
     formData.description = $('#description').val();
 
     console.log(formData);
-    postCat(formData);
+    postCar(formData);
 }
 
-function postCat(cat){
+function postCar(car){
     $.ajax({
-        url:'/api/cat',
+        url:'/api/car',
         type:'POST',
-        data:cat,
+        data:car,
         success: (result)=>{
             if (result.statusCode === 201) {
-                alert('cat post successful');
+                alert('car post successful');
             }
         }
     });
 }
 
-function getAllCats(){
-    $.get('/api/cats', (response)=>{
+function getAllCars(){
+    $.get('/api/cars', (response)=>{
         // response's data is in array format, so we can use it
         if (response.statusCode === 200) {
             addCards(response.data);
@@ -51,5 +51,5 @@ $(document).ready(function(){
         formSubmitted();
     });
     $('.modal').modal();
-    getAllCats();
+    getAllCars();
 });

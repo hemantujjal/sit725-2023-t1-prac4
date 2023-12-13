@@ -8,15 +8,15 @@ var port = process.env.port || 3000;
 
 const cardList = [{
     title: 'Virtus',
-    path: 'images/virtus.avif',
+    path: 'images/virtus.jpg',
     link: 'About Virtus',
-    description: 'Description of Cat 2'
+    description: 'Description of Virtus'
 },
 {
     title: 'Rapid',
-    path: 'images/virtus.avif',
+    path: 'images/rapid.jpg',
     link: 'About Rapid',
-    description: 'Description of Cat 3'
+    description: 'Description of Rapid'
 }];
 
 

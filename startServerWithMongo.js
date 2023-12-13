@@ -21,7 +21,7 @@ const client = new MongoClient(uri, {
 async function runDBConnection() {
     try {
         await client.connect();
-        collection = client.db().collection('Cat');
+        collection = client.db().collection('Car');
         console.log(collection);
     } catch(ex) {
         console.error(ex);
@@ -32,28 +32,28 @@ app.get('/', function (req,res) {
     res.render('indexMongo.html');
 });
 
-app.get('/api/cats', (req,res) => {
-    getAllCats((err,result)=>{
+app.get('/api/cars', (req,res) => {
+    getAllCars((err,result)=>{
         if (!err) {
-            res.json({statusCode:200, data:result, message:'get all cats successful'});
+            res.json({statusCode:200, data:result, message:'get all cars successful'});
         }
     });
 });
 
-app.post('/api/cat', (req,res)=>{
-    let cat = req.body;
-    postCat(cat, (err, result) => {
+app.post('/api/car', (req,res)=>{
+    let car = req.body;
+    postCar(car, (err, result) => {
         if (!err) {
             res.json({statusCode:201, data:result, message:'success'});
         }
     });
 });
 
-function postCat(cat,callback) {
-    collection.insertOne(cat,callback);
+function postCar(car,callback) {
+    collection.insertOne(car,callback);
 }
 
-function getAllCats(callback){
+function getAllCars(callback){
     collection.find({}).toArray(callback);
 }
 
